@@ -2,7 +2,7 @@
 
 **Platform Engineer | DevOps | AI Infrastructure | Design**
 
-📍 Miami/Tampa | 8+ years shipping production systems | Building things that work
+📍 Miami | 8+ years shipping production systems | Building things that work
 
 ---
 
