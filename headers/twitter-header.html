@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skewüo - Twitter/X Header</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', system-ui, sans-serif;
+      background: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    
+    .header {
+      width: 1500px;
+      height: 500px;
+      background: #fafafa;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    /* Left dark panel */
+    .left-panel {
+      width: 52%;
+      height: 100%;
+      background: #0a0a0a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 80px;
+      position: relative;
+    }
+    
+    .logo {
+      font-size: 72px;
+      font-weight: 500;
+      color: #fafafa;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+    
+    .tagline {
+      font-size: 15px;
+      font-weight: 300;
+      color: #71717a;
+      letter-spacing: 0.01em;
+    }
+    
+    /* Right light panel */
+    .right-panel {
+      width: 48%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 0 80px;
+    }
+    
+    .services-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: #a1a1aa;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    
+    .services {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    
+    .service {
+      font-size: 20px;
+      font-weight: 400;
+      color: #0a0a0a;
+      letter-spacing: -0.02em;
+    }
+    
+    .cta {
+      font-size: 13px;
+      font-weight: 500;
+      color: #fafafa;
+      background: #0a0a0a;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      margin-top: 4px;
+    }
+    
+    /* Diagonal cut */
+    .left-panel::after {
+      content: '';
+      position: absolute;
+      right: -70px;
+      top: 0;
+      bottom: 0;
+      width: 140px;
+      background: #0a0a0a;
+      transform: skewX(-6deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="left-panel">
+      <div class="logo">Skewüo</div>
+      <div class="tagline">Brands built to outlast.</div>
+    </div>
+    
+    <div class="right-panel">
+      <div class="services-label">What we do</div>
+      <div class="services">
+        <span class="service">Brand Identity</span>
+        <span class="service">Product Design</span>
+        <span class="service">Industrial Design</span>
+      </div>
+      <div class="cta">Book a Call</div>
+    </div>
+  </div>
+</body>
+</html>

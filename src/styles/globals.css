@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+ 
+    --primary: 0 0% 7%;
+    --primary-foreground: 0 0% 100%;
+ 
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 0 0% 7%;
+ 
+    --muted: 0 0% 97%;
+    --muted-foreground: 0 0% 45%;
+ 
+    --accent: 0 0% 97%;
+    --accent-foreground: 0 0% 7%;
+ 
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 92%;
+    --input: 0 0% 92%;
+    --ring: 0 0% 7%;
+ 
+    --radius: 1rem;
+  }
+ 
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 4%;
+ 
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+ 
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+ 
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply bg-background text-foreground min-h-screen font-sans;
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Apple-style selection */
+  ::selection {
+    @apply bg-foreground/10;
+  }
+
+  /* Smooth transitions for theme switching */
+  body, body * {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+}
+
+@layer components {
+  /* Apple-style glass morphism */
+  .glass {
+    @apply bg-background/80 backdrop-blur-xl border border-border/50;
+  }
+
+  /* Premium button styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-medium 
+           bg-foreground text-background rounded-full
+           transition-all duration-300 ease-out
+           hover:scale-105 hover:shadow-lg
+           active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-medium 
+           bg-transparent text-foreground rounded-full border border-border
+           transition-all duration-300 ease-out
+           hover:bg-secondary hover:scale-105
+           active:scale-95;
+  }
+
+  /* Subtle link hover */
+  .link-subtle {
+    @apply relative text-muted-foreground transition-colors duration-300 hover:text-foreground;
+  }
+
+  .link-subtle::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-px bg-foreground transition-all duration-300;
+  }
+
+  .link-subtle:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  /* Text gradient for hero elements */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground;
+  }
+
+  /* Large display text - Apple style */
+  .text-display {
+    @apply text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight leading-[1.05];
+  }
+
+  /* Headline text */
+  .text-headline {
+    @apply text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-tight;
+  }
+
+  /* Body large */
+  .text-body-lg {
+    @apply text-lg sm:text-xl md:text-2xl font-light leading-relaxed tracking-normal;
+  }
+
+  /* Subtle fade in animation */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-delay-1 {
+    animation: fadeIn 0.8s ease-out 0.1s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-3 {
+    animation: fadeIn 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
