@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: helm
-    repoURL: https://github.com/skewuo/studio.git
+    repoURL: https://github.com/skewuo/skewuo.git
     targetRevision: main
   syncPolicy:
     automated:
