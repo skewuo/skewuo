@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+Rob McElvenny 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Full-Stack Engineer | AI Infrastructure | Enterprise SaaS**
+Building the future of autonomous AI systems at [Hyper](https://usehyper.ai)
 
-Currently, two official plugins are available:
+ 🔥 Current Projects
+- **Hyper** - Hyper, Inc — Cognitive Autonomous Operating System 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ 💼 Tech Stack
+**Frontend:** React, TypeScript, Vite, Tailwind, Framer Motion  
+**Backend:** Node.js, Bun, Express, PostgreSQL, Redis  
+**AI/ML:** OpenAI, Anthropic, Grok, Custom Vision Models  
+**Infrastructure:** Kubernetes, Docker, ArgoCD, CloudFlare  
+**Integrations:** Stripe, Twilio, Deepgram, ElevenLabs
 
-## Expanding the ESLint configuration
+ 🎯 What I'm Building
+I specialize in AI with beautiful user experiences. My work focuses on:
+- AI systems that actually work in production
+- Agents that think, remember, and act
+- Enterprise-grade infrastructure that scales
+- Frictionless customer experiences
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+📫 Let's Connect
 
-- Configure the top-level `parserOptions` property like this:
+- **Email:** rob@usehyper.ai
+- **Website:** [skewuo.com](https://skewuo.com) - Skewuo Creative (Design/Development/Brand Agency) 
+- **Twitter/X:** [@robertmce](https://twitter.com/skewuo)
+- **LinkedIn:** [linkedin.com/in/heyrobbb](https://linkedin.com/in/heyrobbb)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+📊 GitHub Stats
+![Robert's GitHub stats](https://github-readme-stats.vercel.app/api?username=robertmce&show_icons=true&theme=dark)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+💡 *Always building, always shipping.*
