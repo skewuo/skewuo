@@ -28,7 +28,7 @@ I specialize in AI with beautiful user experiences. My work focuses on:
 - **LinkedIn:** [linkedin.com/in/heyrobbb](https://linkedin.com/in/heyrobbb)
 
 📊 GitHub Stats
-![Robert's GitHub stats](https://github-readme-stats.vercel.app/api?username=robertmce&show_icons=true&theme=dark)
+![Robert's GitHub stats](https://github-readme-stats.vercel.app/api?username=skewuo&show_icons=true&theme=dark)
 
 ---
 💡 *Always building, always shipping.*
