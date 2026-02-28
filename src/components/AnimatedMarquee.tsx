@@ -29,7 +29,7 @@ export function AnimatedMarquee({ items, duration = 30, className = '' }: Marque
         {duplicatedItems.map((item, index) => (
           <span
             key={index}
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light text-muted-foreground/[0.03] select-none"
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light text-muted-foreground/[0.15] select-none"
           >
             {item}
           </span>

@@ -1,0 +1,33 @@
+<svg width="1000" height="1000" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="#FAFAFA"/>
+  
+  <!-- Coffee Bean -->
+  <g transform="translate(500, 320)">
+    <ellipse cx="0" cy="0" rx="85" ry="110" fill="#2C1810"/>
+    <path d="M0 -95 Q-15 0 0 95" stroke="#FAFAFA" stroke-width="8" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Ember - Cursive Text -->
+  <text x="500" y="580" 
+        font-family="Georgia, serif" 
+        font-size="180" 
+        font-style="italic"
+        font-weight="400"
+        fill="#2C1810" 
+        text-anchor="middle"
+        letter-spacing="-2">
+    Ember
+  </text>
+  
+  <!-- Coffee - Clean sans underneath -->
+  <text x="500" y="680" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="72" 
+        font-weight="300"
+        fill="#8B7355" 
+        text-anchor="middle"
+        letter-spacing="12">
+    COFFEE
+  </text>
+</svg>

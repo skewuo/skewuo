@@ -88,7 +88,7 @@ function LandingPage() {
       {/* Hero */}
       <section className="min-h-[90vh] flex flex-col justify-center px-6 sm:px-8 lg:px-16 relative overflow-hidden">
         {/* Background Text Marquee */}
-        <div className="absolute inset-0 flex items-center pointer-events-none opacity-[0.02]">
+        <div className="absolute inset-0 flex items-center pointer-events-none opacity-[0.08]">
           <AnimatedMarquee 
             items={['SKEWÜO', 'STUDIO', 'DESIGN']} 
             duration={50}
@@ -191,7 +191,7 @@ function LandingPage() {
       {/* Selected Work */}
       <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16 bg-secondary/30 relative overflow-hidden">
         {/* Subtle Background Marquee */}
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none opacity-[0.02]">
+        <div className="absolute bottom-0 left-0 right-0 pointer-events-none opacity-[0.08]">
           <AnimatedMarquee 
             items={['SELECTED WORK', '2024', 'PORTFOLIO']} 
             duration={35}

@@ -14,7 +14,7 @@ export function FloatingOrbs() {
     {
       id: 1,
       size: 600,
-      color: 'bg-purple-500/10',
+      color: 'bg-purple-500/20',
       initialX: '10%',
       initialY: '20%',
       duration: 25
@@ -22,7 +22,7 @@ export function FloatingOrbs() {
     {
       id: 2,
       size: 500,
-      color: 'bg-blue-500/10',
+      color: 'bg-blue-500/20',
       initialX: '70%',
       initialY: '60%',
       duration: 30
@@ -30,7 +30,7 @@ export function FloatingOrbs() {
     {
       id: 3,
       size: 400,
-      color: 'bg-pink-500/10',
+      color: 'bg-pink-500/20',
       initialX: '40%',
       initialY: '80%',
       duration: 35
