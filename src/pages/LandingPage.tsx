@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { AnimatedMarquee } from '../components/AnimatedMarquee'
-import { FloatingOrbs } from '../components/FloatingOrbs'
 
 function LandingPage() {
   const fadeIn = {
@@ -82,9 +81,6 @@ function LandingPage() {
 
   return (
     <div className="min-h-screen relative">
-      {/* Floating Background Orbs */}
-      <FloatingOrbs />
-
       {/* Hero */}
       <section className="min-h-[90vh] flex flex-col justify-center px-6 sm:px-8 lg:px-16 relative overflow-hidden z-10">
         {/* Background Text Marquee */}
