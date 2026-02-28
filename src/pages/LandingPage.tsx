@@ -86,7 +86,7 @@ function LandingPage() {
       <FloatingOrbs />
 
       {/* Hero */}
-      <section className="min-h-[90vh] flex flex-col justify-center px-6 sm:px-8 lg:px-16 relative overflow-hidden">
+      <section className="min-h-[90vh] flex flex-col justify-center px-6 sm:px-8 lg:px-16 relative overflow-hidden z-10">
         {/* Background Text Marquee */}
         <div className="absolute inset-0 flex items-center pointer-events-none opacity-[0.08]">
           <AnimatedMarquee 
@@ -138,7 +138,7 @@ function LandingPage() {
       </section>
 
       {/* Services */}
-      <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16 border-t border-border relative overflow-hidden">
+      <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16 border-t border-border relative overflow-hidden z-10">
         {/* Background Marquee */}
         <div className="absolute inset-0 flex items-center pointer-events-none">
           <AnimatedMarquee items={marqueeItems} duration={40} />
@@ -189,7 +189,7 @@ function LandingPage() {
       </section>
 
       {/* Selected Work */}
-      <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16 bg-secondary/30 relative overflow-hidden">
+      <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16 bg-secondary/30 relative overflow-hidden z-10">
         {/* Subtle Background Marquee */}
         <div className="absolute bottom-0 left-0 right-0 pointer-events-none opacity-[0.08]">
           <AnimatedMarquee 
@@ -252,7 +252,7 @@ function LandingPage() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16">
+      <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16 relative z-10">
         <div className="max-w-[1400px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -275,7 +275,7 @@ function LandingPage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16 border-t border-border">
+      <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16 border-t border-border relative z-10">
         <div className="max-w-[1400px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
