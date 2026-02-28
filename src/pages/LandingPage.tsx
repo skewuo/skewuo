@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { AnimatedMarquee } from '../components/AnimatedMarquee'
+import { FloatingOrbs } from '../components/FloatingOrbs'
 
 function LandingPage() {
   const fadeIn = {
@@ -68,11 +70,32 @@ function LandingPage() {
     }
   ]
 
+  const marqueeItems = [
+    'Brand Identity',
+    'Product Design', 
+    'Design Systems',
+    'Industrial Design',
+    'UI/UX',
+    'Typography',
+    'Prototyping'
+  ]
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* Floating Background Orbs */}
+      <FloatingOrbs />
+
       {/* Hero */}
-      <section className="min-h-[90vh] flex flex-col justify-center px-6 sm:px-8 lg:px-16">
-        <div className="max-w-[1400px] mx-auto w-full">
+      <section className="min-h-[90vh] flex flex-col justify-center px-6 sm:px-8 lg:px-16 relative overflow-hidden">
+        {/* Background Text Marquee */}
+        <div className="absolute inset-0 flex items-center pointer-events-none opacity-[0.02]">
+          <AnimatedMarquee 
+            items={['SKEWÜO', 'STUDIO', 'DESIGN']} 
+            duration={50}
+          />
+        </div>
+
+        <div className="max-w-[1400px] mx-auto w-full relative z-10">
           <motion.div
             variants={staggerContainer}
             initial="initial"
@@ -115,8 +138,13 @@ function LandingPage() {
       </section>
 
       {/* Services */}
-      <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16 border-t border-border">
-        <div className="max-w-[1400px] mx-auto">
+      <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16 border-t border-border relative overflow-hidden">
+        {/* Background Marquee */}
+        <div className="absolute inset-0 flex items-center pointer-events-none">
+          <AnimatedMarquee items={marqueeItems} duration={40} />
+        </div>
+
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -139,12 +167,16 @@ function LandingPage() {
                   delay: index * 0.1,
                   ease: [0.25, 0.4, 0.25, 1] 
                 }}
-                className="group"
+                whileHover={{ 
+                  scale: 1.02,
+                  transition: { duration: 0.3, ease: [0.34, 1.56, 0.64, 1] }
+                }}
+                className="group p-8 rounded-2xl bg-background/50 backdrop-blur-sm border border-border/50 hover:border-border hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 cursor-pointer"
               >
                 <span className="text-sm text-muted-foreground tracking-wide">
                   {service.number}
                 </span>
-                <h3 className="text-3xl sm:text-4xl font-light tracking-tight mt-4 mb-6">
+                <h3 className="text-3xl sm:text-4xl font-light tracking-tight mt-4 mb-6 group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground text-lg leading-relaxed">
@@ -157,8 +189,16 @@ function LandingPage() {
       </section>
 
       {/* Selected Work */}
-      <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16 bg-secondary/30">
-        <div className="max-w-[1400px] mx-auto">
+      <section className="py-32 sm:py-40 px-6 sm:px-8 lg:px-16 bg-secondary/30 relative overflow-hidden">
+        {/* Subtle Background Marquee */}
+        <div className="absolute bottom-0 left-0 right-0 pointer-events-none opacity-[0.02]">
+          <AnimatedMarquee 
+            items={['SELECTED WORK', '2024', 'PORTFOLIO']} 
+            duration={35}
+          />
+        </div>
+
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
