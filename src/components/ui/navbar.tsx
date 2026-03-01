@@ -42,9 +42,13 @@ export default function Navbar() {
             {/* Logo */}
             <Link 
               to="/" 
-              className="text-base font-medium tracking-tight text-foreground hover:text-muted-foreground transition-colors duration-300"
+              className="flex items-center gap-2 group transition-opacity duration-300 hover:opacity-80"
             >
-              Skewüo
+              <img 
+                src="/logo.svg" 
+                alt="Skewüo" 
+                className="h-8 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}

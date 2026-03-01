@@ -11,9 +11,13 @@ export default function Footer() {
           <div>
             <Link 
               to="/" 
-              className="text-base font-medium tracking-tight text-foreground"
+              className="inline-block hover:opacity-80 transition-opacity"
             >
-              Skewüo
+              <img 
+                src="/logo.svg" 
+                alt="Skewüo" 
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="text-sm text-muted-foreground mt-4 max-w-[250px]">
               Brand, product, and industrial design. Skeuomorphic sensibility, modern execution.
