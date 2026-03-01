@@ -67,7 +67,7 @@ function NewLandingPage() {
               className="inline-block mb-8"
             >
               <div className="px-4 py-2 rounded-full border border-border bg-secondary/50 text-sm font-medium">
-                ✨ Design subscription for modern brands
+                Design subscription for modern brands
               </div>
             </motion.div>
 
@@ -125,35 +125,54 @@ function NewLandingPage() {
         <AnimatedMarquee items={services} duration={30} />
       </section>
 
-      {/* Social Proof */}
-      <section className="py-20 px-6 sm:px-8 lg:px-16 relative z-10">
-        <div className="max-w-[1400px] mx-auto">
-          <motion.div
+      {/* Testimonials */}
+      <section className="py-20 sm:py-32 px-6 sm:px-8 lg:px-16 relative z-10">
+        <div className="max-w-[1200px] mx-auto">
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-4xl sm:text-5xl font-bold text-center mb-16"
           >
-            <p className="text-muted-foreground mb-12 text-lg">
-              Trusted by forward-thinking brands
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center opacity-40">
-              {['Värd', 'HALO', 'Stillpoint', 'Grounded'].map((client) => (
-                <div key={client} className="text-3xl font-bold">{client}</div>
-              ))}
-            </div>
-          </motion.div>
+            What clients say
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                quote: "Skewüo delivered our complete brand identity in under a week. The quality and speed were incredible.",
+                author: "Sarah Chen",
+                role: "Founder, Värd"
+              },
+              {
+                quote: "After three App Store rejections, they fixed everything in 48 hours. We're now live and growing fast.",
+                author: "Michael Torres",
+                role: "CTO, Stillpoint"
+              }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="p-8 rounded-2xl border border-border bg-secondary/30"
+              >
+                <p className="text-lg leading-relaxed mb-6">"{testimonial.quote}"</p>
+                <div>
+                  <p className="font-semibold">{testimonial.author}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Apple App Store Approval Expert */}
-      <section className="py-20 sm:py-32 px-6 sm:px-8 lg:px-16 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 relative z-10 overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
-        
-        <div className="max-w-[1400px] mx-auto relative">
+      <section className="py-20 sm:py-32 px-6 sm:px-8 lg:px-16 relative z-10">
+        <div className="max-w-[1200px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -162,8 +181,8 @@ function NewLandingPage() {
             className="text-center mb-16"
           >
             <div className="inline-block mb-6">
-              <div className="px-4 py-2 rounded-full border border-border bg-background/80 text-sm font-medium">
-                🍎 Specialized Expertise
+              <div className="px-4 py-2 rounded-full border border-border bg-secondary/50 text-sm font-medium">
+                Specialized Expertise
               </div>
             </div>
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
@@ -177,13 +196,13 @@ function NewLandingPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="p-10 rounded-3xl border-2 border-border bg-background/80 backdrop-blur-sm"
+              className="p-10 rounded-2xl border border-border bg-secondary/30"
             >
               <h3 className="text-3xl font-bold mb-6">Common rejection fixes</h3>
               <ul className="space-y-4">
@@ -195,10 +214,10 @@ function NewLandingPage() {
                   '4.2 - Minimum functionality requirements'
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <Check className="w-4 h-4 text-foreground" />
+                    <div className="w-5 h-5 rounded-full bg-foreground flex items-center justify-center flex-shrink-0 mt-1">
+                      <Check className="w-3 h-3 text-background" />
                     </div>
-                    <span className="text-lg text-muted-foreground">{item}</span>
+                    <span className="text-base text-muted-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -209,7 +228,7 @@ function NewLandingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="p-10 rounded-3xl border-2 border-border bg-background/80 backdrop-blur-sm"
+              className="p-10 rounded-2xl border border-border bg-secondary/30"
             >
               <h3 className="text-3xl font-bold mb-6">What we do</h3>
               <ul className="space-y-4">
@@ -221,10 +240,10 @@ function NewLandingPage() {
                   'Implement changes and resubmit for approval'
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <Sparkles className="w-4 h-4 text-foreground" />
+                    <div className="w-5 h-5 rounded-full bg-foreground flex items-center justify-center flex-shrink-0 mt-1">
+                      <Check className="w-3 h-3 text-background" />
                     </div>
-                    <span className="text-lg text-muted-foreground">{item}</span>
+                    <span className="text-base text-muted-foreground">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -238,18 +257,15 @@ function NewLandingPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center"
           >
-            <div className="inline-flex flex-col sm:flex-row gap-4">
-              <Link to="/contact">
-                <button className="px-10 py-5 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl font-bold rounded-full hover:scale-105 transition-transform shadow-lg shadow-purple-500/30">
-                  Fix my rejection
-                  <ArrowRight className="w-6 h-6 inline-block ml-2" />
-                </button>
-              </Link>
-              <Link to="/contact">
-                <button className="px-10 py-5 border-2 border-border text-xl font-semibold rounded-full hover:bg-secondary hover:border-foreground transition-all">
-                  Book a consultation
-                </button>
-              </Link>
+            <div className="space-y-4">
+              <p className="text-lg text-muted-foreground">
+                Try risk-free. Not happy after a week? Get 75% back, no questions asked.
+              </p>
+              <div className="flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
+                <span>No contracts</span>
+                <span>Cancel anytime</span>
+                <span>Pause when needed</span>
+              </div>
             </div>
             <p className="text-muted-foreground mt-6">
               Usually resolved within 48-72 hours
@@ -259,8 +275,8 @@ function NewLandingPage() {
       </section>
 
       {/* Benefits Grid - Enhanced */}
-      <section className="py-20 sm:py-32 px-6 sm:px-8 lg:px-16 relative z-10 overflow-hidden">
-        <div className="max-w-[1400px] mx-auto">
+      <section className="py-20 sm:py-32 px-6 sm:px-8 lg:px-16 relative z-10">
+        <div className="max-w-[1200px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -277,7 +293,7 @@ function NewLandingPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -285,26 +301,17 @@ function NewLandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-                className="group relative p-10 rounded-3xl border-2 border-border bg-gradient-to-br from-secondary/80 to-secondary/40 hover:border-foreground/20 transition-all duration-300 cursor-pointer overflow-hidden"
+                className="p-10 rounded-2xl border border-border bg-secondary/30 hover:bg-secondary/50 transition-colors duration-300"
               >
-                {/* Animated background gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <div className="relative z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <benefit.icon className="w-8 h-8 text-foreground" />
-                  </div>
-                  <h3 className="text-3xl font-bold mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-300">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    {benefit.description}
-                  </p>
+                <div className="w-12 h-12 rounded-xl bg-foreground/5 flex items-center justify-center mb-6">
+                  <benefit.icon className="w-6 h-6 text-foreground" />
                 </div>
-
-                {/* Corner accent */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <h3 className="text-2xl font-bold mb-4">
+                  {benefit.title}
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {benefit.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -312,12 +319,8 @@ function NewLandingPage() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-20 sm:py-32 px-6 sm:px-8 lg:px-16 bg-secondary/30 relative z-10 overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
-        
-        <div className="max-w-[1400px] mx-auto relative">
+      <section id="pricing" className="py-20 sm:py-32 px-6 sm:px-8 lg:px-16 bg-secondary/30 relative z-10">
+        <div className="max-w-[1200px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -350,7 +353,7 @@ function NewLandingPage() {
                 <h3 className="text-4xl font-bold mb-3">Monthly Subscription</h3>
                 <p className="text-muted-foreground text-lg mb-8">Pause or cancel anytime</p>
                 <div className="flex items-baseline justify-center gap-3 mb-2">
-                  <span className="text-7xl sm:text-8xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  <span className="text-7xl sm:text-8xl font-bold">
                     $4,995
                   </span>
                   <span className="text-3xl text-muted-foreground font-light">/mo</span>
@@ -361,8 +364,8 @@ function NewLandingPage() {
               <div className="space-y-5 mb-10">
                 {pricingFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-5 h-5 text-foreground" />
+                    <div className="w-6 h-6 rounded-full bg-foreground flex items-center justify-center flex-shrink-0 mt-1">
+                      <Check className="w-4 h-4 text-background" />
                     </div>
                     <span className="text-lg leading-relaxed">{feature}</span>
                   </div>
@@ -370,7 +373,7 @@ function NewLandingPage() {
               </div>
 
               <Link to="/contact">
-                <button className="w-full py-5 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl font-bold rounded-full hover:scale-105 transition-transform shadow-lg shadow-purple-500/30">
+                <button className="w-full py-5 bg-foreground text-background text-xl font-bold rounded-full hover:opacity-90 transition-opacity">
                   Get started
                   <ArrowRight className="w-6 h-6 inline-block ml-2" />
                 </button>
@@ -399,7 +402,7 @@ function NewLandingPage() {
 
       {/* Selected Work */}
       <section className="py-20 sm:py-32 px-6 sm:px-8 lg:px-16 relative z-10">
-        <div className="max-w-[1400px] mx-auto">
+        <div className="max-w-[1200px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -422,7 +425,7 @@ function NewLandingPage() {
             </Link>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               { name: 'Värd', type: 'Brand Identity', color: 'from-amber-500/20 to-orange-500/20' },
               { name: 'HALO', type: 'Product Design', color: 'from-blue-500/20 to-cyan-500/20' },

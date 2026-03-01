@@ -16,7 +16,7 @@ export default function Footer() {
               <img 
                 src="/logo.svg" 
                 alt="Skewüo" 
-                className="h-16 w-auto dark:invert"
+                className="h-16 w-auto text-foreground"
               />
             </Link>
             <p className="text-sm text-muted-foreground mt-4 max-w-[250px]">
