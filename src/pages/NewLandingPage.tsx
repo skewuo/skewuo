@@ -171,7 +171,7 @@ function NewLandingPage() {
       </section>
 
       {/* Apple App Store Approval Expert */}
-      <section className="py-20 sm:py-32 px-6 sm:px-8 lg:px-16 relative z-10">
+      <section className="py-20 sm:py-32 px-6 sm:px-8 lg:px-16 relative z-10 bg-secondary/20">
         <div className="max-w-[1200px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -180,9 +180,15 @@ function NewLandingPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <div className="inline-block mb-6">
+            <div className="inline-flex items-center gap-3 mb-6">
               <div className="px-4 py-2 rounded-full border border-border bg-secondary/50 text-sm font-medium">
                 Specialized Expertise
+              </div>
+              <div className="relative">
+                <div className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold rounded-md uppercase tracking-wide shadow-lg">
+                  iOS Expert
+                </div>
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full animate-pulse" />
               </div>
             </div>
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
@@ -194,6 +200,29 @@ function NewLandingPage() {
             <p className="text-2xl text-muted-foreground max-w-[900px] mx-auto font-light">
               Stuck with App Store rejections? We've helped dozens of apps navigate Apple's review process and get approved.
             </p>
+          </motion.div>
+
+          {/* Mock App Screenshots */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-16 flex justify-center gap-4 overflow-hidden"
+          >
+            <div className="flex gap-4">
+              {[1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className="w-48 h-96 rounded-3xl bg-gradient-to-br from-secondary to-secondary/50 border-4 border-border shadow-2xl flex items-center justify-center relative overflow-hidden"
+                  style={{ transform: `translateY(${i === 2 ? -20 : 0}px)` }}
+                >
+                  <div className="absolute top-0 left-0 right-0 h-8 bg-background/10 backdrop-blur-sm" />
+                  <div className="text-muted-foreground/30 text-sm">App {i}</div>
+                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-6 bg-background/20 rounded-full" />
+                </div>
+              ))}
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
