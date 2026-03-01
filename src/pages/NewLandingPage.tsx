@@ -147,6 +147,117 @@ function NewLandingPage() {
         </div>
       </section>
 
+      {/* Apple App Store Approval Expert */}
+      <section className="py-20 sm:py-32 px-6 sm:px-8 lg:px-16 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 relative z-10 overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
+        
+        <div className="max-w-[1400px] mx-auto relative">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-block mb-6">
+              <div className="px-4 py-2 rounded-full border border-border bg-background/80 text-sm font-medium">
+                🍎 Specialized Expertise
+              </div>
+            </div>
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+              Apple App Store{' '}
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+                approval expert
+              </span>
+            </h2>
+            <p className="text-2xl text-muted-foreground max-w-[900px] mx-auto font-light">
+              Stuck with App Store rejections? We've helped dozens of apps navigate Apple's review process and get approved.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="p-10 rounded-3xl border-2 border-border bg-background/80 backdrop-blur-sm"
+            >
+              <h3 className="text-3xl font-bold mb-6">Common rejection fixes</h3>
+              <ul className="space-y-4">
+                {[
+                  '2.1 - App completeness and functionality',
+                  '4.3 - Spam and duplicate apps',
+                  '5.1.1 - Privacy compliance and data collection',
+                  '2.3.1 - Hidden features and functionality',
+                  '4.2 - Minimum functionality requirements'
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Check className="w-4 h-4 text-foreground" />
+                    </div>
+                    <span className="text-lg text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="p-10 rounded-3xl border-2 border-border bg-background/80 backdrop-blur-sm"
+            >
+              <h3 className="text-3xl font-bold mb-6">What we do</h3>
+              <ul className="space-y-4">
+                {[
+                  'Review your rejection and identify root causes',
+                  'Fix design, copy, and functionality issues',
+                  'Update App Store metadata and screenshots',
+                  'Craft appeal responses to Apple reviewers',
+                  'Implement changes and resubmit for approval'
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <Sparkles className="w-4 h-4 text-foreground" />
+                    </div>
+                    <span className="text-lg text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center"
+          >
+            <div className="inline-flex flex-col sm:flex-row gap-4">
+              <Link to="/contact">
+                <button className="px-10 py-5 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl font-bold rounded-full hover:scale-105 transition-transform shadow-lg shadow-purple-500/30">
+                  Fix my rejection
+                  <ArrowRight className="w-6 h-6 inline-block ml-2" />
+                </button>
+              </Link>
+              <Link to="/contact">
+                <button className="px-10 py-5 border-2 border-border text-xl font-semibold rounded-full hover:bg-secondary hover:border-foreground transition-all">
+                  Book a consultation
+                </button>
+              </Link>
+            </div>
+            <p className="text-muted-foreground mt-6">
+              Usually resolved within 48-72 hours
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Benefits Grid - Enhanced */}
       <section className="py-20 sm:py-32 px-6 sm:px-8 lg:px-16 relative z-10 overflow-hidden">
         <div className="max-w-[1400px] mx-auto">
