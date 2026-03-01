@@ -13,11 +13,11 @@ export default function Footer() {
               to="/" 
               className="inline-block hover:opacity-80 transition-opacity"
             >
-              <img 
-                src="/logo.svg" 
-                alt="Skewüo" 
-                className="h-16 w-auto text-foreground"
-              />
+              <svg width="1098" height="1047" viewBox="0 0 1098 1047" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-16 w-auto">
+                <path d="M459.5 377.5H277.5V633.5C289.9 842.7 462.333 895 547 895C634 895 694.302 861.264 735.5 824C802.586 763.319 820.723 683.786 820 633.5V377.5H637.5V636.5C634.5 663.5 621.5 716 547 715C518.667 715 468 702.5 459.5 636.5V377.5Z" fill="currentColor" stroke="currentColor"/>
+                <circle cx="386" cy="244" r="95.5" fill="currentColor" stroke="currentColor"/>
+                <circle cx="711" cy="244" r="95.5" fill="currentColor" stroke="currentColor"/>
+              </svg>
             </Link>
             <p className="text-sm text-muted-foreground mt-4 max-w-[250px]">
               Brand, product, and industrial design. Skeuomorphic sensibility, modern execution.
