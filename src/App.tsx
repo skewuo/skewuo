@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import LandingPage from './pages/LandingPage'
+import NewLandingPage from './pages/NewLandingPage'
 import WorkPage from './pages/WorkPage'
 import ProjectPage from './pages/ProjectPage'
 import AboutPage from './pages/AboutPage'
@@ -16,7 +16,7 @@ function App() {
           <Navbar />
           <main className="flex-grow">
             <Routes>
-              <Route path="/" element={<LandingPage />} />
+              <Route path="/" element={<NewLandingPage />} />
               <Route path="/work" element={<WorkPage />} />
               <Route path="/work/:projectId" element={<ProjectPage />} />
               <Route path="/about" element={<AboutPage />} />
