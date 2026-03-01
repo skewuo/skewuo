@@ -47,7 +47,7 @@ export default function Navbar() {
               <img 
                 src="/logo.svg" 
                 alt="Skewüo" 
-                className="h-8 w-auto"
+                className="h-12 w-auto dark:invert"
               />
             </Link>
 
