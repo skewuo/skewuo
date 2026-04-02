@@ -1,8 +1,8 @@
-# MadKobblerz — Client Project
+# The Cobbler Guy — Client Project
 
 > Luxury shoe & leather repair with AI-powered quoting
 
-**Client:** MadKobblerz  
+**Client:** The Cobbler Guy (Guillaume Berteau)  
 **Retainer:** $2,500/mo  
 **Status:** 🟢 ACTIVE  
 **Start Date:** Feb 22, 2026

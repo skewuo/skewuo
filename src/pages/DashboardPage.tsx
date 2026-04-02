@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
-import { Home, Settings, CreditCard, Mail, Lock, Database, Terminal, Rocket } from 'lucide-react'
-import { useState } from 'react'
+import { Home, Settings, CreditCard, Mail, Lock, Database, Terminal, Rocket, Activity, MessageSquare, DollarSign, Users, CheckCircle, Clock, ExternalLink } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { openclawService } from '../services/openclaw'
 
 export default function DashboardPage() {
   const [activeSection, setActiveSection] = useState('dashboard') // 'dashboard' | 'framework' | etc

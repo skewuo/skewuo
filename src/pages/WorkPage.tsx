@@ -27,8 +27,8 @@ export default function WorkPage() {
       deliverables: ['Logo', 'Can Design', 'Brand Identity', 'Social Templates']
     },
     {
-      id: 'mad-kobblers',
-      client: 'Mad Kobblers',
+      id: 'the-cobbler-guy',
+      client: 'The Cobbler Guy',
       type: 'Brand Identity',
       year: '2024',
       description: 'Luxury leather repair and restoration. Heritage craftsmanship meets modern service. Bold, confident, unapologetically premium.',

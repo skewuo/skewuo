@@ -4,6 +4,7 @@ import NewWorkPage from './pages/NewWorkPage'
 import ProjectPage from './pages/ProjectPage'
 import NewAboutPage from './pages/NewAboutPage'
 import NewContactPage from './pages/NewContactPage'
+import SkewuoOS from './pages/SkewuoOS'
 import Navbar from './components/ui/navbar'
 import Footer from './components/ui/footer'
 import { ThemeProvider } from './lib/ThemeContext'
@@ -21,6 +22,7 @@ function App() {
               <Route path="/work/:projectId" element={<ProjectPage />} />
               <Route path="/about" element={<NewAboutPage />} />
               <Route path="/contact" element={<NewContactPage />} />
+              <Route path="/os" element={<SkewuoOS />} />
             </Routes>
           </main>
           <Footer />

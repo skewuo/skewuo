@@ -47,21 +47,31 @@ const projects: Record<string, {
     approach: 'We created a modern apothecary aesthetic — matte textures, botanical illustrations, and a restrained color palette. The typography balances approachability with credibility.',
     result: 'A brand that stands out on shelf while building trust through honest, clean design. The can design became a point of differentiation in retail environments.',
     color: 'bg-green-50 dark:bg-green-950/30',
-    nextProject: 'mad-kobblers'
+    nextProject: 'the-cobbler-guy'
   },
-  'mad-kobblers': {
-    client: 'Mad Kobblers',
-    type: 'Brand Identity',
-    year: '2024',
-    headline: 'Luxury repair. Heritage craft.',
+  'the-cobbler-guy': {
+    client: 'The Cobbler Guy',
+    type: 'AI Operating System',
+    year: '2026',
+    headline: 'We built an AI that quotes a Hermès bag in 15 seconds.',
     description: [
-      'Mad Kobblers is a luxury leather repair and restoration service — bringing worn Hermès, Chanel, and heritage pieces back to life.',
-      'They needed a brand that felt as premium as the items they restore. Bold, confident, unapologetically craft-focused.'
+      'The Cobbler Guy is a luxury leather restoration studio in Miami — servicing Hermès, Chanel, Louis Vuitton, Louboutin, and more.',
+      'Guillaume needed more than a website. He needed an entire operating system — one that could handle customer intake, AI-powered quoting, payments, artisan assignment, and order tracking without him touching it.',
+      'We built exactly that. Zero to fully operational in weeks.'
     ],
-    deliverables: ['Logotype', 'Stationery System', 'Website Design', 'Signage', 'Service Menu'],
-    challenge: 'Position a repair service as luxury, not discount. Make restoration feel like an investment, not a last resort.',
-    approach: 'We developed a bold typographic identity with craft-inspired details — subtle stitching motifs, rich leather tones, gold foil accents. The name itself is irreverent; the design backs it up with confidence.',
-    result: 'An identity that commands premium pricing and attracts clients who value craftsmanship over convenience. The brand now sits alongside the luxury houses it services.',
+    deliverables: [
+      'AI Quote Engine (Claude Vision)',
+      'Customer Web App',
+      'Stripe Payment Flow',
+      'Admin CRM + Pipeline',
+      'Artisan Assignment System',
+      'Autonomous Email Notifications',
+      'Order Tracking Portal',
+      'k8s Infrastructure'
+    ],
+    challenge: 'Every quote required Guillaume to physically assess the item, manually price the restoration, and communicate back to the customer. It was slow, inconsistent, and impossible to scale. The business was capped by how many assessments one person could do in a day.',
+    approach: 'We built a Claude Vision pipeline that analyzes photos of luxury items — identifying brand, material, damage type, and severity — and generates a fully itemized quote in under 15 seconds. The customer approves it, pays a 50% deposit via Stripe, and ships their piece. Artisans get assigned automatically. The customer tracks every stage. Status emails fire at each step in the pipeline. Guillaume runs the business from a single admin dashboard.',
+    result: 'A fully autonomous luxury service business. The entire customer journey — from photo upload to deposit payment to delivery — runs without manual intervention. What used to take hours of back-and-forth now takes 15 seconds. Live at thecobblerguy.com.',
     color: 'bg-neutral-100 dark:bg-neutral-900',
     nextProject: 'halo'
   },
@@ -165,8 +175,180 @@ const projects: Record<string, {
   }
 }
 
+function CobblerGuyPage() {
+  const FLOW = [
+    { n: '01', title: 'Photo upload', body: 'Customer photographs their piece from multiple angles on their phone. Any bag, shoe, or accessory.' },
+    { n: '02', title: 'AI analysis', body: 'Claude Vision identifies brand, material, damage type, and severity in under 15 seconds. No manual assessment needed.' },
+    { n: '03', title: 'Instant quote', body: 'An itemized restoration quote is generated automatically — labor, materials, timeline. Customer reviews and approves with one click.' },
+    { n: '04', title: 'Deposit payment', body: 'Stripe collects 50% upfront. Apple Pay, Google Pay, card — whatever the customer prefers.' },
+    { n: '05', title: 'Artisan pipeline', body: 'The job is assigned to an available artisan. They receive it on their mobile interface, mark it started, mark it done.' },
+    { n: '06', title: 'Autonomous updates', body: 'Status emails fire at every stage — received, in progress, completed, shipped back. Zero manual communication.' },
+  ]
+
+  const STACK = [
+    ['AI Quote Engine', 'Claude Vision + pricing matrix'],
+    ['Customer Web App', 'React, Vite, TypeScript'],
+    ['Payment Flow', 'Stripe deposit + balance collection'],
+    ['Admin CRM', 'Full pipeline, artisan management'],
+    ['Order Tracking', 'Public customer portal'],
+    ['Email System', 'Resend — transactional, branded'],
+    ['Infrastructure', 'k8s on Hetzner, ArgoCD GitOps'],
+    ['Auth', 'JWT + Google OAuth + Apple Sign In'],
+  ]
+
+  return (
+    <div className="min-h-screen bg-background">
+
+      {/* Hero */}
+      <section className="pt-32 pb-24 px-6 sm:px-8 lg:px-16 border-b border-border">
+        <div className="max-w-[1200px] mx-auto">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <Link to="/work" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-12">
+              <ArrowLeft className="w-4 h-4" /> Back to work
+            </Link>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
+            <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>
+              <div className="flex items-center gap-2 mb-8">
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-xs tracking-widest uppercase text-muted-foreground">Live · thecobblerguy.com</span>
+              </div>
+              <p className="text-sm tracking-widest uppercase text-muted-foreground mb-4">AI Operating System · 2026</p>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.9] mb-6">
+                The Cobbler Guy
+              </h1>
+              <p className="text-2xl text-muted-foreground font-light leading-relaxed">
+                We built an AI that quotes a Hermès bag in 15 seconds.
+              </p>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="grid grid-cols-2 gap-4">
+              {[
+                { stat: '15s', label: 'AI quote generation' },
+                { stat: '50%', label: 'Deposit via Stripe' },
+                { stat: '0', label: 'Manual interventions' },
+                { stat: '∞', label: 'Scalable quotes/day' },
+              ].map(s => (
+                <div key={s.stat} className="p-6 rounded-xl border border-border bg-secondary/10">
+                  <div className="text-4xl font-bold tracking-tight mb-1">{s.stat}</div>
+                  <div className="text-sm text-muted-foreground">{s.label}</div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* The problem */}
+      <section className="py-24 px-6 sm:px-8 lg:px-16 border-b border-border">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} transition={{ duration: 0.7 }}>
+            <p className="text-xs tracking-widest uppercase text-muted-foreground mb-6">The Problem</p>
+            <p className="text-xl font-light leading-relaxed text-muted-foreground">
+              Every quote required Guillaume to physically assess the item,
+              manually price the restoration, and communicate back to the
+              customer. It was slow, inconsistent, and impossible to scale.
+              The business was capped by how many assessments one person
+              could do in a day.
+            </p>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.15 }}>
+            <p className="text-xs tracking-widest uppercase text-muted-foreground mb-6">The Solution</p>
+            <p className="text-xl font-light leading-relaxed text-muted-foreground">
+              A Claude Vision pipeline that analyzes photos of luxury items —
+              identifying brand, material, damage type, and severity —
+              and generates a fully itemized quote in under 15 seconds.
+              The entire customer journey runs without manual intervention.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* How it works — the flow */}
+      <section className="py-24 px-6 sm:px-8 lg:px-16 border-b border-border">
+        <div className="max-w-[1200px] mx-auto">
+          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
+            viewport={{ once: true }} className="text-xs tracking-widest uppercase text-muted-foreground mb-16">
+            How it works
+          </motion.p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border rounded-2xl overflow-hidden">
+            {FLOW.map((step, i) => (
+              <motion.div key={step.n}
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} transition={{ delay: i * 0.08, duration: 0.6 }}
+                className="p-8 bg-background hover:bg-secondary/10 transition-colors">
+                <div className="text-xs text-muted-foreground/40 mb-4 tracking-widest">{step.n}</div>
+                <h3 className="font-bold mb-3">{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{step.body}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stack */}
+      <section className="py-24 px-6 sm:px-8 lg:px-16 border-b border-border">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}>
+            <p className="text-xs tracking-widest uppercase text-muted-foreground mb-6">Stack deployed</p>
+            <div className="divide-y divide-border">
+              {STACK.map(([label, detail], i) => (
+                <motion.div key={label}
+                  initial={{ opacity: 0, x: -12 }} whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+                  className="flex justify-between items-center py-4">
+                  <span className="font-medium text-sm">{label}</span>
+                  <span className="text-xs text-muted-foreground">{detail}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} transition={{ delay: 0.2 }}>
+            <p className="text-xs tracking-widest uppercase text-muted-foreground mb-6">The result</p>
+            <p className="text-xl font-light leading-relaxed text-muted-foreground mb-8">
+              A fully autonomous luxury service business. The entire customer
+              journey — from photo upload to deposit payment to delivery —
+              runs without manual intervention. What used to take hours of
+              back-and-forth now takes 15 seconds.
+            </p>
+            <a href="https://thecobblerguy.com" target="_blank" rel="noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold hover:text-muted-foreground transition-colors group">
+              Visit thecobblerguy.com
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Next */}
+      <section className="py-20 px-6 sm:px-8 lg:px-16">
+        <div className="max-w-[1200px] mx-auto">
+          <p className="text-sm tracking-widest uppercase text-muted-foreground mb-8">Next project</p>
+          <Link to="/work/halo" className="group inline-flex items-center gap-4 hover:opacity-70 transition-opacity">
+            <span className="text-4xl font-bold">HALO</span>
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}
+
 export default function ProjectPage() {
   const { projectId } = useParams<{ projectId: string }>()
+
+  // Bespoke page for The Cobbler Guy
+  if (projectId === 'the-cobbler-guy') return <CobblerGuyPage />
+
   const project = projectId ? projects[projectId] : null
 
   if (!project) {
