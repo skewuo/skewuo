@@ -56,7 +56,7 @@ const projects: Record<string, {
     headline: 'We built an AI that quotes a Hermès bag in 15 seconds.',
     description: [
       'The Cobbler Guy is a luxury leather restoration studio in Miami — servicing Hermès, Chanel, Louis Vuitton, Louboutin, and more.',
-      'Guillaume needed more than a website. He needed an entire operating system — one that could handle customer intake, AI-powered quoting, payments, artisan assignment, and order tracking without him touching it.',
+      'The business needed more than a website. They needed an entire operating system — one that could handle customer intake, AI-powered quoting, payments, artisan assignment, and order tracking without him touching it.',
       'We built exactly that. Zero to fully operational in weeks.'
     ],
     deliverables: [
@@ -69,8 +69,8 @@ const projects: Record<string, {
       'Order Tracking Portal',
       'k8s Infrastructure'
     ],
-    challenge: 'Every quote required Guillaume to physically assess the item, manually price the restoration, and communicate back to the customer. It was slow, inconsistent, and impossible to scale. The business was capped by how many assessments one person could do in a day.',
-    approach: 'We built a Claude Vision pipeline that analyzes photos of luxury items — identifying brand, material, damage type, and severity — and generates a fully itemized quote in under 15 seconds. The customer approves it, pays a 50% deposit via Stripe, and ships their piece. Artisans get assigned automatically. The customer tracks every stage. Status emails fire at each step in the pipeline. Guillaume runs the business from a single admin dashboard.',
+    challenge: 'Every quote required manual physical assessment of the item, manually price the restoration, and communicate back to the customer. It was slow, inconsistent, and impossible to scale. The business was capped by how many assessments one person could do in a day.',
+    approach: 'We built a Claude Vision pipeline that analyzes photos of luxury items — identifying brand, material, damage type, and severity — and generates a fully itemized quote in under 15 seconds. The customer approves it, pays a 50% deposit via Stripe, and ships their piece. Artisans get assigned automatically. The customer tracks every stage. Status emails fire at each step in the pipeline. The entire business runs from a single admin dashboard.',
     result: 'A fully autonomous luxury service business. The entire customer journey — from photo upload to deposit payment to delivery — runs without manual intervention. What used to take hours of back-and-forth now takes 15 seconds. Live at thecobblerguy.com.',
     color: 'bg-neutral-100 dark:bg-neutral-900',
     nextProject: 'halo'
@@ -250,7 +250,7 @@ function CobblerGuyPage() {
             viewport={{ once: true }} transition={{ duration: 0.7 }}>
             <p className="text-xs tracking-widest uppercase text-muted-foreground mb-6">The Problem</p>
             <p className="text-xl font-light leading-relaxed text-muted-foreground">
-              Every quote required Guillaume to physically assess the item,
+              Every quote required manual physical assessment of the item,
               manually price the restoration, and communicate back to the
               customer. It was slow, inconsistent, and impossible to scale.
               The business was capped by how many assessments one person

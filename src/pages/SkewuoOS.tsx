@@ -26,7 +26,7 @@ export default function SkewuoOS() {
   const setupSteps = [
     { title: 'Gateway running', desc: 'localhost:18789 · Grok 4', done: !!gatewayOnline, cmd: 'openclaw gateway --port 18789' },
     { title: 'Telegram connected', desc: 'Bot token configured', done: true, cmd: null },
-    { title: 'WhatsApp Business', desc: 'Connect Guillaume\'s account', done: false, cmd: 'openclaw channels login --channel whatsapp' },
+    { title: 'WhatsApp Business', desc: 'Connect the owner\'s account', done: false, cmd: 'openclaw channels login --channel whatsapp' },
     { title: 'The Cobbler Guy webhook', desc: 'Auto-create orders from DMs', done: false, cmd: 'openclaw webhooks add --name the-cobbler-guy --url http://localhost:3002/api/mk/webhook' },
     { title: 'Stripe secrets', desc: 'Invoice & payment management', done: false, cmd: 'openclaw secrets set STRIPE_SECRET_KEY sk_...' },
     { title: 'The Cobbler Guy agent', desc: 'Train AI on services & pricing', done: false, cmd: 'openclaw agent configure --name the-cobbler-guy' },
@@ -207,7 +207,7 @@ export default function SkewuoOS() {
               <div className="w-8 h-8 rounded-lg bg-secondary border border-border flex items-center justify-center text-xs font-bold">M</div>
               <div className="flex-1">
                 <div className="text-sm font-medium text-foreground">The Cobbler Guy</div>
-                <div className="text-xs text-muted-foreground/60">thecobblerguy.com · Guillaume Berteau · Miami</div>
+                <div className="text-xs text-muted-foreground/60">thecobblerguy.com · the owner Berteau · Miami</div>
               </div>
               <span className="text-xs text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-full">active</span>
             </div>
